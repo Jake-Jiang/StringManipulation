@@ -5,7 +5,6 @@ import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.progress.ProcessCanceledException;
 import com.intellij.openapi.ui.Messages;
-import org.apache.commons.lang.CharEncoding;
 import osmedile.intellij.stringmanip.AbstractStringManipAction;
 import osmedile.intellij.stringmanip.StringManipulationBundle;
 import ro.isdc.wro.model.resource.processor.support.JSMin;
@@ -24,7 +23,7 @@ public class MinifyJavaScriptAction extends AbstractStringManipAction<Object> {
 		try {
 			ByteArrayOutputStream out = new ByteArrayOutputStream();
 			new JSMin(new ByteArrayInputStream(selectedText.getBytes(StandardCharsets.UTF_8)), out).jsmin();
-			return out.toString(CharEncoding.UTF_8).trim();
+			return out.toString(StandardCharsets.UTF_8).trim();
 		} catch (Throwable e) {
 			SwingUtilities.invokeLater(() -> Messages.showErrorDialog(editor.getProject(), String.valueOf(e), StringManipulationBundle.message("dialog.title.minify.javascript")));
 			LOG.info(e);

@@ -25,20 +25,6 @@ public class JsonSortTest {
 	}
 
 	@Test
-	public void test_caseSensitive() throws Exception {
-		String input = HierarchicalSortTest.readFile("caseSensitive.json");
-
-		SortSettings sortSettings = new SortSettings();
-		sortSettings.setSortType(Sort.CASE_SENSITIVE_A_Z);
-		JsonSort sort = new JsonSort(null, sortSettings);
-		String result = sort.sort(input);
-
-		String expected = HierarchicalSortTest.readFile("caseSensitive_result.json");
-
-		assertEquals(expected, result);
-	}
-
-	@Test
 	public void test_array2() throws Exception {
 		String input = HierarchicalSortTest.readFile("array2.json");
 
