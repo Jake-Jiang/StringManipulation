@@ -42,178 +42,31 @@
         >
             <add-to-group group-id="EditMenu" anchor="last"/>
 
-            <action id="osmedile.intellij.stringmanip.RepeatAction" class="osmedile.intellij.stringmanip.RepeatAction"
-                    text="Repeat Last Action"/>
-            <separator/>
-
-            <group id="StringManipulation.Group.EscapeUnescape" text="Escape/Unescape..."
-                   description="Group of String manipulation escape actions"
-                   popup="true">
-                <action id="osmedile.intellij.stringmanip.EscapeJavaAction"
-                        class="osmedile.intellij.stringmanip.escaping.EscapeJavaAction"
-                        text="Escape Java"
-                        description="org.apache.commons.text.StringEscapeUtils#escapeJava">
-                </action>
-                <action id="osmedile.intellij.stringmanip.UnescapeJavaAction"
-                        class="osmedile.intellij.stringmanip.escaping.UnescapeJavaAction"
-                        text="Unescape Java"
-                        description="org.apache.commons.text.StringEscapeUtils#unescapeJava">
-                </action>
-                <separator/>
-
-                <action id="osmedile.intellij.stringmanip.EscapeJavaScriptAction"
-                        class="osmedile.intellij.stringmanip.escaping.EscapeJavaScriptAction"
-                        text="Escape JavaScript"
-                        description="org.apache.commons.text.StringEscapeUtils#escapeEcmaScript">
-                </action>
-                <action id="osmedile.intellij.stringmanip.UnescapeJavaScriptAction"
-                        class="osmedile.intellij.stringmanip.escaping.UnescapeJavaScriptAction"
-                        text="Unescape JavaScript"
-                        description="org.apache.commons.text.StringEscapeUtils#unescapeEcmaScript">
-                </action>
-                <separator/>
-                <group id="StringManipulation.Group.EscapeC" text="Escape C#" popup="true">
-                    <action id="osmedile.intellij.stringmanip.escaping.EscapeCSharpRegularAction"
-                            class="osmedile.intellij.stringmanip.escaping.EscapeCSharpRegularAction"
-                            text="C# Regular &quot;...&quot;"
-                            description="C# regular &quot;...&quot;">
-                    </action>
-                    <action id="osmedile.intellij.stringmanip.escaping.EscapeCSharpVerbatimAction"
-                            class="osmedile.intellij.stringmanip.escaping.EscapeCSharpVerbatimAction"
-                            text="C# Verbatim @&quot;...&quot;"
-                            description="C# verbatim @&quot;...&quot;">
-                    </action>
-                    <action id="osmedile.intellij.stringmanip.escaping.EscapeCSharpInterpolatedAction"
-                            class="osmedile.intellij.stringmanip.escaping.EscapeCSharpInterpolatedAction"
-                            text="C# Interpolated $&quot;...&quot;"
-                            description="C# interpolated $&quot;...&quot;">
-                    </action>
-                    <action id="osmedile.intellij.stringmanip.escaping.EscapeCSharpInterpolatedVerbatimAction"
-                            class="osmedile.intellij.stringmanip.escaping.EscapeCSharpInterpolatedVerbatimAction"
-                            text="C# Interpolated Verbatim @$&quot;...&quot;"
-                            description="C# interpolated verbatim @$&quot;...&quot;">
-                    </action>
-                </group>
-                <group id="StringManipulation.Group.UnescapeC" text="Unescape C#" popup="true">
-                    <action id="osmedile.intellij.stringmanip.escaping.UnescapeCSharpRegularAction"
-                            class="osmedile.intellij.stringmanip.escaping.UnescapeCSharpRegularAction"
-                            text="C# Regular &quot;...&quot;"
-                            description="C# regular &quot;...&quot;">
-                    </action>
-                    <action id="osmedile.intellij.stringmanip.escaping.UnescapeCSharpVerbatimAction"
-                            class="osmedile.intellij.stringmanip.escaping.UnescapeCSharpVerbatimAction"
-                            text="C# Verbatim @&quot;...&quot;"
-                            description="C# verbatim @&quot;...&quot;">
-                    </action>
-                    <action id="osmedile.intellij.stringmanip.escaping.UnescapeCSharpInterpolatedAction"
-                            class="osmedile.intellij.stringmanip.escaping.UnescapeCSharpInterpolatedAction"
-                            text="C# Interpolated $&quot;...&quot;"
-                            description="C# interpolated $&quot;...&quot;">
-                    </action>
-                    <action id="osmedile.intellij.stringmanip.escaping.UnescapeCSharpInterpolatedVerbatimAction"
-                            class="osmedile.intellij.stringmanip.escaping.UnescapeCSharpInterpolatedVerbatimAction"
-                            text="C# Interpolated Verbatim @$&quot;...&quot;"
-                            description="C# interpolated verbatim @$&quot;...&quot;">
-                    </action>
-                </group>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.EscapeHtmlAction"
-                        class="osmedile.intellij.stringmanip.escaping.EscapeHtmlAction"
-                        text="Escape HTML"
-                        description="org.apache.commons.text.StringEscapeUtils#escapeHtml4">
-                </action>
-                <action id="osmedile.intellij.stringmanip.UnescapeHtmlAction"
-                        class="osmedile.intellij.stringmanip.escaping.UnescapeHtmlAction"
-                        text="Unescape HTML"
-                        description="org.apache.commons.text.StringEscapeUtils#unescapeHtml4">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.EscapeSQLAction"
-                        class="osmedile.intellij.stringmanip.escaping.EscapeSQLAction"
-                        text="Escape SQL"
-                >
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.EscapeJsonAction"
-                        class="osmedile.intellij.stringmanip.escaping.EscapeJsonAction"
-                        text="Escape JSON"
-                        description="org.apache.commons.text.StringEscapeUtils#escapeJson">
-                </action>
-                <action id="osmedile.intellij.stringmanip.UnescapeJsonAction"
-                        class="osmedile.intellij.stringmanip.escaping.UnescapeJsonAction"
-                        text="Unescape JSON"
-                        description="org.apache.commons.text.StringEscapeUtils#unescapeJson">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.EscapeXMLAction"
-                        class="osmedile.intellij.stringmanip.escaping.EscapeXMLAction"
-                        text="Escape XML"
-                        description="org.apache.commons.text.StringEscapeUtils#escapeXml11">
-                </action>
-                <action id="osmedile.intellij.stringmanip.UnescapeXMLAction"
-                        class="osmedile.intellij.stringmanip.escaping.UnescapeXMLAction"
-                        text="Unescape XML"
-                        description="org.apache.commons.text.StringEscapeUtils#unescapeXml">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.EscapePHPAction"
-                        class="osmedile.intellij.stringmanip.escaping.EscapePHPAction"
-                        text="Escape PHP"
-                >
-                </action>
-                <action id="osmedile.intellij.stringmanip.UnescapePHPAction"
-                        class="osmedile.intellij.stringmanip.escaping.UnescapePHPAction"
-                        text="Unescape PHP"
-                >
-                </action>
-                <separator/>
-                <action id="StringManipulation.NormalizeUnicode"
-                        class="osmedile.intellij.stringmanip.escaping.normalize.NormalizeUnicodeAction"
-                        text="Unicode Normalization..."
-                        description="NFD/NFC/NFKD/NFKC Normalization with a preview"
-                >
-                </action>
-                <!--                <separator/>-->
-                <action id="StringManipulation.DiacriticsToAsciiAction"
-                        class="osmedile.intellij.stringmanip.escaping.DiacriticsToAsciiAction"
-                        text="Convert Diacritics (Accents) to ASCII"
-                        description="Convert diacritics (accents) to ASCII">
-                </action>
-                <action id="osmedile.intellij.stringmanip.NonAsciiToUnicodeEscapedAction"
-                        class="osmedile.intellij.stringmanip.escaping.NonAsciiToUnicodeEscapedAction"
-                        text="Escape Non-ASCII to Unicode"
-                        description="Escape non-ASCII to Unicode">
-                </action>
-                <action id="osmedile.intellij.stringmanip.UnicodeEscapedToStringAction"
-                        class="osmedile.intellij.stringmanip.escaping.UnicodeEscapedToStringAction"
-                        text="Escaped Unicode to String"
-                        description="Escaped unicode to string">
-                </action>
-                <!--                 <action id="StringManipulation.NormalizeActionNFD"-->
-                <!--                         class="osmedile.intellij.stringmanip.escaping.normalize.NormalizeActionNFD"-->
-                <!--                         text="Unicode Normalization D (NFD)"-->
-                <!--                         description="Normalization Form D (NFD): Canonical Decomposition">-->
-                <!--                 </action>-->
-                <!--                 <action id="StringManipulation.NormalizeActionNFC"-->
-                <!--                         class="osmedile.intellij.stringmanip.escaping.normalize.NormalizeActionNFC"-->
-                <!--                         text="Unicode Normalization C (NFC)"-->
-                <!--                         description="Normalization Form C (NFC): Canonical Decomposition, followed by Canonical Composition">-->
-                <!--                 </action>-->
-                <!--                 <action id="StringManipulation.NormalizeActionNFKD"-->
-                <!--                         class="osmedile.intellij.stringmanip.escaping.normalize.NormalizeActionNFKD"-->
-                <!--                         text="Unicode Normalization KD (NFKD)"-->
-                <!--                         description="Normalization Form KD (NFKD): Compatibility Decomposition">-->
-                <!--                 </action>-->
-                <!--                 <action id="StringManipulation.NormalizeActionNFKC"-->
-                <!--                         class="osmedile.intellij.stringmanip.escaping.normalize.NormalizeActionNFKC"-->
-                <!--                         text="Unicode Normalization KC (NFKC)"-->
-                <!--                         description="Normalization Form KC (NFKC): Compatibility Decomposition, followed by Canonical Composition">-->
-                <!--                 </action>-->
-            </group>
-
             <group id="StringManipulation.Group.EncodeDecode" text="Encode/Decode..."
                    description="Group of String manipulation encode/decode actions"
                    popup="true">
+                <action id="osmedile.intellij.stringmanip.URLEncodeAction"
+                        class="osmedile.intellij.stringmanip.encoding.URLEncodeAction"
+                        text="Encode URL"
+                        description="Encode URL (by java.net.URLEncoder)">
+                </action>
+                <action id="osmedile.intellij.stringmanip.URLDecodeAction"
+                        class="osmedile.intellij.stringmanip.encoding.URLDecodeAction"
+                        text="Decode URL"
+                        description="Decode URL (by java.net.URLDecoder)">
+                </action>
+                <separator/>
+                <action id="osmedile.intellij.stringmanip.encoding.TimestampEncodeAction"
+                        class="osmedile.intellij.stringmanip.encoding.TimestampEncodeAction"
+                        text="ISO Timestamp to Epoch Milliseconds"
+                >
+                </action>
+                <action id="osmedile.intellij.stringmanip.encoding.TimestampDecodeAction"
+                        class="osmedile.intellij.stringmanip.encoding.TimestampDecodeAction"
+                        text="Epoch Milliseconds to ISO Timestamp"
+                >
+                </action>
+                <separator/>
                 <action id="osmedile.intellij.stringmanip.EncodeMd5HexAction"
                         class="osmedile.intellij.stringmanip.encoding.EncodeMd5HexAction"
                         text="Encode to MD5 Hex"
@@ -268,38 +121,7 @@
                         description="Decode hex">
                 </action>
                 <separator/>
-                <action id="osmedile.intellij.stringmanip.URLEncodeAction"
-                        class="osmedile.intellij.stringmanip.encoding.URLEncodeAction"
-                        text="Encode URL"
-                        description="Encode URL (by java.net.URLEncoder)">
-                </action>
-                <action id="osmedile.intellij.stringmanip.URLDecodeAction"
-                        class="osmedile.intellij.stringmanip.encoding.URLDecodeAction"
-                        text="Decode URL"
-                        description="Decode URL (by java.net.URLDecoder)">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.encoding.URLEncodeRFC3986"
-                        class="osmedile.intellij.stringmanip.encoding.URLEncodeRFC3986Action"
-                        text="Encode URL (RFC 3986)"
-                        description="Encode URL (RFC 3986 - space character as %20 instead of +)">
-                </action>
-                <action id="osmedile.intellij.stringmanip.encoding.URLDecodeRFC3986"
-                        class="osmedile.intellij.stringmanip.encoding.URLDecodeRFC3986Action"
-                        text="Decode URL (RFC 3986)"
-                        description="Decode URL (RFC 3986 - space character as %20 instead of +)">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.encoding.TimestampEncodeAction"
-                        class="osmedile.intellij.stringmanip.encoding.TimestampEncodeAction"
-                        text="ISO Timestamp to Epoch Milliseconds"
-                >
-                </action>
-                <action id="osmedile.intellij.stringmanip.encoding.TimestampDecodeAction"
-                        class="osmedile.intellij.stringmanip.encoding.TimestampDecodeAction"
-                        text="Epoch Milliseconds to ISO Timestamp"
-                >
-                </action>
+
             </group>
 
             <separator/>
@@ -308,94 +130,33 @@
                    description="Group of String manipulation Switch case actions"
                    icon="/icons/case.svg"
                    popup="true">
-                <!--                dynamically registered-->
-                <!--                <action id="StringManipulation.SwitchStyleAction"-->
-                <!--                        class="osmedile.intellij.stringmanip.styles.SwitchStyleAction"-->
-                <!--                        text="Switch case"-->
-                <!--                        description="Switch/Toggle case (camelCase, kebab-lowercase, KEBAB-UPPERCASE, snake_case, SCREAMING_SNAKE_CASE, dot.case, words lowercase,  Normal sentence, Words Capitalized)">-->
-                <!--                </action>-->
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.WordsAndCamelToConstantStyleCaseAction"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToScreamingSnakeCaseOrCamelCaseAction"
-                        text="SCREAMING_SNAKE_CASE / camelCase"
-                        description="Toggle: SCREAMING_SNAKE_CASE / camelCase">
-                </action>
-                <action id="StringManipulation.ToSnakeCaseOrCamelCase"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToSnakeCaseOrCamelCaseAction"
-                        text="snake_case / camelCase"
-                        description="Toggle: snake_case / camelCase">
-                </action>
-                <action id="StringManipulation.ToHyphenCaseAction"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToKebabOrSnakeCaseAction"
-                        text="kebab-case / snake_case"
-                        description="Toggle: kebab-case / snake_case">
-                </action>
-                <action id="StringManipulation.ToHyphenCaseOrCamelCase"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToKebabOrCamelCaseCaseAction"
-                        text="kebab-case / camelCase"
-                        description="Toggle: kebab-case / camelCase">
-                </action>
-                <action id="StringManipulation.ToDotStyleAction"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToDotStyleOrCamelCaseAction"
-                        text="dot.case / camelCase"
-                        description="Toggle: dot.case / camelCase">
-                </action>
-                <action id="StringManipulation.ToPascalCaseOrCamelCase"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToPascalCaseOrCamelCaseAction"
-                        text="PascalCase / camelCase"
-                        description="Toggle: PascalCase / camelCase">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.styles.ToCamelCaseOrToWordLowercaseAction"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToWordLowercaseOrToCamelCaseAction"
-                        text="lower case words / camelCase"
-                        description="Toggle: lower case words / camelCase">
-                </action>
-                <action id="StringManipulation.ToSentenceCaseOrCamelCase"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToSentenceCaseOrCamelCaseAction"
-                        text="First word capitalized / camelCase"
-                        description="Toggle: First word capitalized / camelCase">
-                </action>
-                <action id="osmedile.intellij.stringmanip.ToCamelCaseAction"
-                        class="osmedile.intellij.stringmanip.styles.switching.ToWordCapitalizedOrCamelCaseAction"
-                        text="Capitalized Words / camelCase"
-                        description="Toggle: Capitalized Words / camelCase">
-                </action>
-                <separator/>
 
                 <action id="StringManipulation.ToCamelCase"
                         class="osmedile.intellij.stringmanip.styles.ToCamelCaseAction"
                         text="To camelCase"
                         description="To camelCase">
                 </action>
-                <action id="StringManipulation.ToSnakeCase"
-                        class="osmedile.intellij.stringmanip.styles.ToSnakeCaseAction"
-                        text="To snake_case"
-                        description="To snake_case">
-                </action>
-                <action id="StringManipulation.ToKebabCase"
-                        class="osmedile.intellij.stringmanip.styles.ToKebabCaseAction"
-                        text="To kebab-case"
-                        description="To kebab-case">
-                </action>
-                <action id="StringManipulation.ToPascalCase"
-                        class="osmedile.intellij.stringmanip.styles.ToPascalCaseAction"
-                        text="To PascalCase"
-                        description="To PascalCase">
-                </action>
                 <action id="StringManipulation.ToScreamingSnakeCase"
                         class="osmedile.intellij.stringmanip.styles.ToScreamingSnakeCaseAction"
                         text="To SCREAMING_SNAKE_CASE"
                         description="To SCREAMING_SNAKE_CASE">
                 </action>
-                <action id="StringManipulation.ToCapitalizedSnakeCase"
-                        class="osmedile.intellij.stringmanip.styles.ToCapitalizedSnakeCaseAction"
-                        text="To Capitalized_Snake_Case"
-                        description="To Capitalized_Snake_Case">
+
+                <action id="StringManipulation.ToSnakeCase"
+                        class="osmedile.intellij.stringmanip.styles.ToSnakeCaseAction"
+                        text="To snake_case"
+                        description="To snake_case">
                 </action>
+
+                <action id="StringManipulation.ToPascalCase"
+                        class="osmedile.intellij.stringmanip.styles.ToPascalCaseAction"
+                        text="To PascalCase"
+                        description="To PascalCase">
+                </action>
+
                 <action id="osmedile.intellij.stringmanip.WordsCapitalizeAction"
                         class="osmedile.intellij.stringmanip.styles.WordsCapitalizeAction"
-                        text="Capitalize"
+                        text="To Capitalize"
                         description="Capitalize using apache-commons WordUtils#capitalizeFully">
                 </action>
                 <action id="osmedile.intellij.stringmanip.ToLowerCaseAction"
@@ -408,380 +169,7 @@
                         text="To UPPER CASE"
                         description="To Upper Case">
                 </action>
-                <action id="osmedile.intellij.stringmanip.SwapCaseAction"
-                        class="osmedile.intellij.stringmanip.styles.InvertCaseAction"
-                        text="Invert case"
-                        description="Invert Case -> iNVERT cASE">
-                </action>
-                <separator/>
-                <action id="StringManipulation.ToSpringEnvironmentVariable"
-                        class="osmedile.intellij.stringmanip.styles.ToSpringBootEnvironmentVariableAction"
-                        text="To Spring Boot System Env Variable"
-                >
-                </action>
-                <separator/>
-                <action id="StringManipulation.OpenSettingsAction"
-                        class="osmedile.intellij.stringmanip.config.OpenSettingsAction"
-                        text="Open Settings..."/>
             </group>
-
-            <separator/>
-
-            <group id="StringManipulation.Group.IncrementDecrement"
-                   text="Increment/Decrement..."
-                   description="Increment, decrement, create sequence, unique numbers"
-                   icon="/icons/calc/calc.svg"
-                   popup="true">
-                <action id="osmedile.intellij.stringmanip.IncrementAction"
-                        class="osmedile.intellij.stringmanip.increment.IncrementAction"
-                        text="Increment"
-                        icon="/icons/calc/plus.svg"
-                        description="Increment numbers inside selected text">
-                </action>
-                <action id="osmedile.intellij.stringmanip.DuplicateAndIncrementAction"
-                        class="osmedile.intellij.stringmanip.increment.DuplicateAndIncrementAction"
-                        text="Duplicate and Increment"
-                        icon="/icons/calc/plusCircle.svg"
-                        description="Duplicate and increment numbers inside selected text">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.DecrementAction"
-                        class="osmedile.intellij.stringmanip.increment.DecrementAction"
-                        text="Decrement"
-                        icon="/icons/calc/minus.svg"
-                        description="Decrement numbers inside selected text">
-                </action>
-                <action id="osmedile.intellij.stringmanip.DuplicateAndDecrementAction"
-                        class="osmedile.intellij.stringmanip.increment.DuplicateAndDecrementAction"
-                        text="Duplicate and Decrement"
-                        icon="/icons/calc/minusCircle.svg"
-                        description="Duplicate and decrement numbers inside selected text">
-                </action>
-                <separator/>
-                <action id="StringManipulation.CreateSequenceAction"
-                        class="osmedile.intellij.stringmanip.increment.CreateSequenceAction"
-                        text="Create Sequence"
-                        icon="/icons/calc/sequence.svg"
-                        description="Keep first number, replace all other by incrementing. Carets without a selection will add a number.">
-                </action>
-                <action id="StringManipulation.IncrementDuplicateNumbersAction"
-                        class="osmedile.intellij.stringmanip.increment.IncrementDuplicateNumbersAction"
-                        text="Increment Duplicates"
-                        icon="/icons/calc/dup.svg"
-                        description="Increment duplicate numbers">
-                </action>
-            </group>
-
-            <group id="StringManipulation.Group.Sort"
-                   text="Sort/Shuffle/Reverse..."
-                   description="Sort lines, delimited text"
-                   icon="/icons/sort.svg"
-                   popup="true">
-                <action id="StringManipulation.Sort"
-                        class="osmedile.intellij.stringmanip.sort.SortAction"
-                        text="Sort Lines..."
-                        description="Universal lines sort with all kinds of features">
-                </action>
-                <action id="StringManipulation.SortTokens"
-                        class="osmedile.intellij.stringmanip.sort.tokens.SortTokensAction"
-                        text="Sort Tokens..."
-                        description="Sort delimited text">
-                </action>
-                <action id="StringManipulation.SortLinesBySubSelectionAction"
-                        class="osmedile.intellij.stringmanip.sort.SortLinesBySubSelectionAction"
-                        text="Sort Lines by Subselection..."
-                        description="Sort lines by subselection - only for multi carets">
-                </action>
-                <action id="StringManipulation.AlignToColumns"
-                        class="osmedile.intellij.stringmanip.align.AlignToColumnsAction"
-                        text="Align/Sort Lines by Columns..."
-                        description="Format selected text to columns/table by a chosen separator/delimiter">
-                </action>
-                <action id="StringManipulation.ReverseAction"
-                        class="osmedile.intellij.stringmanip.sort.ReverseLinesAction"
-                        text="Reverse Lines"
-                        description="Reverse order of lines">
-                </action>
-                <action id="StringManipulation.ShuffleLinesAction"
-                        class="osmedile.intellij.stringmanip.sort.ShuffleLinesAction"
-                        text="Shuffle Lines"
-                        description="Shuffle lines">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.swap.Reverse"
-                        class="osmedile.intellij.stringmanip.swap.ReverseAction" text="Reverse Characters"
-                        description="Reverse Characters: 'abc' -> 'cba'">
-                </action>
-                <action id="StringManipulation.ShuffleCharacters"
-                        class="osmedile.intellij.stringmanip.sort.ShuffleCharactersAction"
-                        text="Shuffle Characters"
-                >
-                </action>
-                <separator/>
-                <action id="StringManipulation.JsonSort"
-                        class="osmedile.intellij.stringmanip.sort.JsonSortAction"
-                        text="JSON Sort"
-                >
-                </action>
-            </group>
-
-            <group id="StringManipulation.Group.Filter"
-                   text="Filter/Remove/Trim/Minify/Convert..."
-                   description="Filter/Remove/Trim/Minify/Convert..."
-                   icon="/icons/filter.svg"
-                   popup="true">
-                <action id="StringManipulation.Grep"
-                        class="osmedile.intellij.stringmanip.filter.GrepAction"
-                        text="Grep..."
-                        description="Grep, inverted grep, group by grep (with a dialog)">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.GrepAction"
-                        class="osmedile.intellij.stringmanip.filter.QuickGrepAction"
-                        text="Grep"
-                        description="Grep by a selected text for the whole file - without a dialog">
-                </action>
-                <action id="osmedile.intellij.stringmanip.InvertedGrepAction"
-                        class="osmedile.intellij.stringmanip.filter.QuickInvertedGrepAction"
-                        text="Inverted Grep"
-                        description="Inverted grep by a selected text for the whole file - without a dialog">
-                </action>
-                <action id="StringManipulation.PartitionGrep"
-                        class="osmedile.intellij.stringmanip.filter.QuickPartitionAction"
-                        text="Partition"
-                        description="Partition matching lines from not-matching">
-                </action>
-                <separator/>
-                <action id="StringManipulation.GroupAndCount"
-                        class="osmedile.intellij.stringmanip.filter.GroupAndCountAction"
-                        text="Group and Count"
-                >
-                </action>
-                <action id="StringManipulation.RemoveDuplicateLines"
-                        class="osmedile.intellij.stringmanip.filter.RemoveDuplicateLinesAction"
-                        text="Remove Duplicates"
-                        description="Remove duplicate lines or text. Supports multicaret subselection.">
-                </action>
-                <action id="StringManipulation.KeepOnlyDuplicateLines"
-                        class="osmedile.intellij.stringmanip.filter.KeepOnlyDuplicateLinesAction"
-                        text="Keep Only Duplicate Lines"
-                        description="Remove non-duplicate lines in selected text or lines within multiple selections">
-                </action>
-                <action id="osmedile.intellij.stringmanip.RemoveEmptyLinesAction"
-                        class="osmedile.intellij.stringmanip.filter.RemoveEmptyLinesAction"
-                        text="Remove Empty Lines"
-                        description="Remove empty lines in selected text">
-                </action>
-                <action id="osmedile.intellij.stringmanip.RemoveExtraEmptyLinesAction"
-                        class="osmedile.intellij.stringmanip.filter.RemoveExtraEmptyLinesAction"
-                        text="Remove Consecutive Empty Lines"
-                        description="Remove consecutive empty lines in selected text">
-                </action>
-                <action id="StringManipulation.RemoveNewLinesAction"
-                        class="osmedile.intellij.stringmanip.filter.RemoveNewLinesAction"
-                        text="Remove All Newlines"
-                        description="Remove all line breaks in selected text">
-                </action>
-                <separator/>
-
-                <action id="osmedile.intellij.stringmanip.TrimAction"
-                        class="osmedile.intellij.stringmanip.filter.TrimAction"
-                        text="Trim"
-                        description="Trim selected text">
-                </action>
-
-                <action id="osmedile.intellij.stringmanip.TrimTrailingAction"
-                        class="osmedile.intellij.stringmanip.filter.TrimTrailingAction"
-                        text="Trim Trailing"
-                        description="Trim trailing whitespaces from selected text">
-                </action>
-                <action id="osmedile.intellij.stringmanip.TrimLeadingAction"
-                        class="osmedile.intellij.stringmanip.filter.TrimLeadingAction"
-                        text="Trim Leading"
-                        description="Trim leading whitespaces from selected text">
-                </action>
-                <action id="osmedile.intellij.stringmanip.TrimAllSpacesAction"
-                        class="osmedile.intellij.stringmanip.filter.TrimAllSpacesAction"
-                        text="Replace Whitespaces with a Single Space Char"
-                        description="Replace multiple whitespaces with a single space character">
-                </action>
-                <action id="osmedile.intellij.stringmanip.RemoveAllSpacesAction"
-                        class="osmedile.intellij.stringmanip.filter.RemoveAllSpacesAction"
-                        text="Remove All Spaces"
-                        description="Remove all spaces in selected text">
-                </action>
-                <separator/>
-                <action id="osmedile.intellij.stringmanip.swap.SwapCharacterToFromIntAction"
-                        class="osmedile.intellij.stringmanip.swap.SwapCharacterToFromIntAction"
-                        text="Convert Between Char and Int"
-                        description="Switching between an int value and either Unicode character escape sequence or Octal character escape sequence (according to settings).">
-                </action>
-                <separator/>
-                <action id="StringManipulation.MinifyJsonAction"
-                        class="osmedile.intellij.stringmanip.transform.MinifyJsonAction"
-                        text="Minify JSON"
-                        description="Using github.com/stleary/JSON-java">
-                </action>
-                <action id="StringManipulation.MinifyJavaScriptAction"
-                        class="osmedile.intellij.stringmanip.transform.MinifyJavaScriptAction"
-                        text="Minify JavaScript"
-                        description="Using github.com/wro4j/wro4j (requires JRE 1.9+)">
-                </action>
-                <separator/>
-                <action id="StringManipulation.ConvertJsonYamlAction"
-                        class="osmedile.intellij.stringmanip.transform.ConvertJsonYamlAction"
-                        text="Convert Between JSON and YAML"
-                        description="Detect whether the selection is JSON or YAML (1.2) and convert to the other">
-                </action>
-            </group>
-
-            <group id="StringManipulation.Group.Align"
-                   text="Align..."
-                   description="Text and columns alignment"
-                   icon="/icons/align/align.svg"
-                   popup="true">
-                <reference ref="StringManipulation.AlignToColumns"/>
-                <separator/>
-                <action id="StringManipulation.AlignCarets"
-                        class="osmedile.intellij.stringmanip.align.AlignCaretsAction"
-                        text="Align Carets"
-                        description="Align carets into a vertical line by inserting spaces"
-                />
-                <action id="StringManipulation.AlignSelections"
-                        class="osmedile.intellij.stringmanip.align.AlignSelectionsAction"
-                        text="Align Selections"
-                        description="Align selections from both sides by inserting spaces"
-                />
-                <separator/>
-                <action id="StringManipulation.AlignLeftAction"
-                        class="osmedile.intellij.stringmanip.align.AlignLeftAction"
-                        text="Align Left"
-                        description="Align text within selections">
-                </action>
-                <action id="StringManipulation.AlignCenterAction"
-                        class="osmedile.intellij.stringmanip.align.AlignCenterAction"
-                        text="Align Center"
-                        description="Align text within selections">
-                </action>
-                <action id="StringManipulation.AlignRightAction"
-                        class="osmedile.intellij.stringmanip.align.AlignRightAction"
-                        text="Align Right"
-                        description="Align text within selections">
-                </action>
-            </group>
-
-            <separator/>
-            <!--                       TODO uncomment when we get more actions  -->
-            <!--            <group text="Transform..."-->
-            <!--                   description="Group of String manipulation transform actions"-->
-            <!--                   popup="true">  -->
-            <action id="osmedile.intellij.stringmanip.swap.SwapWordsAction"
-                    class="osmedile.intellij.stringmanip.swap.SwapWordsAction" text="Swap Words"
-                    description="Swap Words - camelCase, kebab-case, snake_case...">
-            </action>
-            <action id="osmedile.intellij.stringmanip.swap.SwapAction"
-                    class="osmedile.intellij.stringmanip.swap.SwapAction" text="Swap Characters/Selections/Lines/Tokens"
-                    description="Depending on what is selected or how many carets there are">
-            </action>
-            <action id="StringManipulation.StraightenQuote"
-                    class="osmedile.intellij.stringmanip.swap.StraightenQuoteAction" text="Straighten Quotes"
-                    description="‘ -&gt; &apos; and ” -&gt; &quot;">
-            </action>
-            <action id="StringManipulation.EducateQuote"
-                    class="osmedile.intellij.stringmanip.swap.EducateQuoteAction" text="Educate Quotes"
-                    description="&apos; -&gt; ‘ and  &quot; -&gt; ”">
-            </action>
-            <separator/>
-            <action id="StringManipulation.QuoteAction"
-                    class="osmedile.intellij.stringmanip.swap.QuoteAction"
-                    text="Quote/Unquote"
-            >
-            </action>
-            <action id="StringManipulation.ShiftQuote"
-                    class="osmedile.intellij.stringmanip.swap.ShiftQuoteAction"
-                    text="Wrap or Shift Between &quot; and ' and `"
-                    description="Shift all double quote, single quote, backtick to the next type (or wrap if none present)">
-            </action>
-            <action id="osmedile.intellij.stringmanip.swap.SwapQuote"
-                    class="osmedile.intellij.stringmanip.swap.SwapQuoteAction"
-                    text="Swap &quot; and '"
-            >
-            </action>
-            <separator/>
-            <action id="StringManipulation.SwitchFilePathSeparators"
-                    class="osmedile.intellij.stringmanip.SwitchFilePathSeparators"
-                    text="Switch File Path Separators: Windows&lt;-&gt;UNIX"
-                    description="Switch file path separators: Windows&lt;-&gt;UNIX">
-            </action>
-            <!--            <action id="osmedile.intellij.stringmanip.transform.DelimitedListAction"-->
-            <!--                    class="osmedile.intellij.stringmanip.transform.DelimitedListAction"-->
-            <!--                    text="Transform Delimited List"-->
-            <!--                    description="Delimited list - e.g between CSV and array">-->
-            <!--            </action>-->
-            <!--            </group>-->
-
-            <separator/>
-
-            <group id="StringManipulation.Group.Misc"
-                   text="Misc..."
-                   description="Miscellaneous editor actions"
-                   popup="true">
-                <action id="StringManipulation.SelectWordInDifferentHumpsModeAction"
-                        class="osmedile.intellij.stringmanip.actions.SelectWordInDifferentHumpsModeAction"
-                        text="Extend Selection in Different &quot;CamelHumps&quot; Mode"
-                />
-                <action id="StringManipulation.SelectAllOccurrencesAction"
-                        class="osmedile.intellij.stringmanip.actions.MySelectAllOccurrencesAction"
-                        text="Select All Occurrences For All Carets"
-                        description="The default one works only for the last caret"
-                />
-                <separator/>
-                <action id="StringManipulation.DuplicateAndReplaceAction"
-                        class="osmedile.intellij.stringmanip.replace.DuplicateAndReplaceAction"
-                        text="Duplicate and Multi Replace"
-                        description="Configure with 'String Manipulation' tool window"
-                />
-                <action id="StringManipulation.ReplaceAction"
-                        class="osmedile.intellij.stringmanip.replace.ReplaceAction"
-                        text="Multi Replace"
-                        description="Configure with 'String Manipulation' tool window"
-                />
-                <separator/>
-                <action id="StringManipulation.PasteCamelCased"
-                        class="osmedile.intellij.stringmanip.paste.PasteCamelCasedAction"
-                        text="Paste - camelCased (Capitalized if needed)"
-                />
-                <action id="StringManipulation.PasteAndKeepSelection"
-                        class="osmedile.intellij.stringmanip.paste.PasteAndKeepSelectionAction"
-                        text="Paste and Keep Selections"
-                        description="For using Macros on the pasted text"
-                />
-                <action id="StringManipulation.PasteAsPhpArray"
-                        class="osmedile.intellij.stringmanip.paste.PasteAsPhpArrayAction"
-                        text="Paste as PHP Array"
-                />
-                <separator/>
-                <action id="StringManipulation.CreateBorder"
-                        class="osmedile.intellij.stringmanip.border.CreateBorderAction"
-                        text="Create Border..."
-                >
-                </action>
-            </group>
-
-            <separator/>
-
-            <!--            <group id="StringManipulation.Group.Custom"-->
-            <!--                   text="Custom"-->
-            <!--                   description="Custom actions"-->
-            <!--                   popup="true"-->
-            <!--                   compact="true"-->
-            <!--            >-->
-            <!--            </group>-->
-
-            <action id="StringManipulation.Shortcuts" class="osmedile.intellij.stringmanip.ShortcutsAction"
-                    text="Shortcuts..."/>
-            <!--            <action id="StringManipulation.SaveAsAction" class="osmedile.intellij.stringmanip.SaveAsAction"-->
-            <!--                    text="Save Last Action..."/>-->
         </group>
 
 
@@ -793,75 +181,6 @@
 
             <separator/>
             <reference ref="StringManipulation.Group.Main"></reference>
-        </group>
-
-
-        <group id="StringManipulation.ToolWindow.Replace"
-               text="String Manipulation ToolWindow - Replace">
-            <action id="StringManipulation.ToolWindow.Replace.ReplaceAction"
-                    class="osmedile.intellij.stringmanip.replace.ReplaceAction"
-                    text="Multi Replace"
-                    description="Configure with 'String Manipulation' tool window"
-                    icon="/actions/execute.svg"
-            />
-
-            <action id="StringManipulation.ToolWindow.Replace.DuplicateAndReplaceAction"
-                    class="osmedile.intellij.stringmanip.replace.DuplicateAndReplaceAction"
-                    text="Duplicate and Multi Replace"
-                    description="Configure with 'String Manipulation' tool window"
-                    icon="/actions/rerun.svg"
-            />
-
-            <action id="StringManipulation.ToolWindow.Replace.SaveAction"
-                    class="osmedile.intellij.stringmanip.replace.gui.actions.SaveAction"
-                    text="Save"
-                    icon="/actions/menu-saveall.svg"
-            />
-
-            <action id="StringManipulation.ToolWindow.Replace.LoadIntelliJReplaceModelAction"
-                    class="osmedile.intellij.stringmanip.replace.gui.actions.LoadIntelliJReplaceModelAction"
-                    text="Load IDE's Model"
-                    icon="AllIcons.Actions.Download"
-            />
-
-            <action id="StringManipulation.ToolWindow.Replace.HistoryAction"
-                    class="osmedile.intellij.stringmanip.replace.gui.actions.HistoryAction"
-                    text="History"
-                    icon="AllIcons.Vcs.History"
-            />
-
-            <action id="StringManipulation.ToolWindow.Replace.ResetAction"
-                    class="osmedile.intellij.stringmanip.replace.gui.actions.ResetAction"
-                    text="Reset"
-                    icon="AllIcons.Actions.GC"
-            />
-            <!--            <action id="StringManipulation.ToolWindow.Replace.Help"-->
-            <!--                    class="osmedile.intellij.stringmanip.toolwindow.replace.actions.HelpAction"-->
-            <!--                    text="Help"-->
-            <!--                    icon="AllIcons.Actions.Help"-->
-            <!--            />-->
-
-        </group>
-        <group id="StringManipulation.ToolWindow.Replace.Item"
-               text="String Manipulation ToolWindow - Replace - Item">
-
-            <action id="StringManipulation.ToolWindow.Replace.Item.MoveUpAction"
-                    class="osmedile.intellij.stringmanip.replace.gui.actions.item.MoveUpAction"
-                    text="Move Up"
-                    icon="AllIcons.Actions.MoveUp"
-            />
-
-            <action id="StringManipulation.ToolWindow.Replace.Item.MoveDownAction"
-                    class="osmedile.intellij.stringmanip.replace.gui.actions.item.MoveDownAction"
-                    text="Move Down"
-                    icon="AllIcons.Actions.MoveDown"
-            />
-            <action id="StringManipulation.ToolWindow.Replace.Item.RemoveAction"
-                    class="osmedile.intellij.stringmanip.replace.gui.actions.item.RemoveAction"
-                    text="Remove"
-                    icon="AllIcons.Actions.GC"
-            />
-
         </group>
 
     </actions>
